@@ -1,0 +1,18 @@
+#path-logo-1{
+    fill: var(--cor-branco) !important;
+    border: 1px solid var(--cor-secundaria);
+}
+
+#path-logo-2{
+    fill: var(--cor-complementar-3);
+}
+
+#path-logo-3{
+    fill: var(--cor-branco);
+    border: 1px solid var(--cor-secundaria);
+}
+
+#path-logo-4{
+    fill: var(--cor-branco);
+    border: 1px solid var(--cor-secundaria);
+}

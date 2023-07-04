@@ -1,0 +1,13 @@
+.botao-padrao {
+    background-color: var(--cor-complementar-3);
+    color: black;
+    border-radius: 4px;
+}
+
+.botao-padrao:hover{
+    background-color: var(--cor-primaria);
+}
+
+.botao-padrao-seguranca{
+    margin-top: 2.5em;
+}

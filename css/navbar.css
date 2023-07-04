@@ -1,0 +1,4 @@
+.contorno-botao{
+    border: 1px solid var(--cor-complementar-3)!important;
+    color: var(--cor-complementar-3)!important;
+}

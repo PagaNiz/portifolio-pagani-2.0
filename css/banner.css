@@ -1,0 +1,14 @@
+@media (min-width:360px){
+    .desc-slide{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(128, 128, 128, 0.2);
+        width: 100%;
+        right: 0 !important;
+        left: 0 !important;
+        padding-bottom: 0.2em !important;
+        margin-bottom: 1em;
+    }
+}

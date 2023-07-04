@@ -1,0 +1,35 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+@import url('../css/logo.css');
+@import url('../css/boots.css');
+@import url('../css/navbar.css');
+@import url('../css/banner.css');
+@import url('../css/buttons.css');
+@import url('../css/generic-class.css');
+
+:root {
+    /* Cores */
+    --cor-primaria: #1282A2;
+    --cor-secundaria: #034078;
+    --cor-secundaria-dark: #033563;
+    --cor-complementar: #001F54;
+    --cor-complementar-2: #0a1129;
+    --cor-complementar-3: #74BAFB;
+    --cor-branco: #FEFCFB;
+    --cor-gelo: #FAFAFA;
+    --cor-cinza: #d6d6d6;
+    --cor-preta: #202020;
+    --cor-dark: #212529;
+}
+
+.texto-azul {
+    color: var(--cor-primaria);
+}
+
+.rodape{
+    background-color: var(--cor-dark);
+    color: var(--cor-branco);
+}
+
+.ico-footer{
+    color: var(--cor-branco);
+}

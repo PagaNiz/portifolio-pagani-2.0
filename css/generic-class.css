@@ -1,0 +1,7 @@
+.branco{
+    color: var(--cor-branco);
+}
+
+.preto{
+    color: var(--cor-preta)!important;
+}
