@@ -15,7 +15,7 @@
 
   <!-- Navbar-->
 
-  <nav class="navbar bg-dark navbar-dark">
+  <nav class="navbar bg-dark navbar-dark user-select-none">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <h1 class="m-0 px-2">
@@ -32,7 +32,8 @@
           </svg>
         </h1>
       </a>
-      <button class="navbar-toggler mx-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <button class="navbar-toggler mx-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -43,11 +44,11 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link active preto" aria-current="page" href="#">Home</a>
+              <a class="nav-link active preto" aria-current="page" href="../index.html">Home</a>
             </li>
             <hr>
             <li class="nav-item">
-              <a class="nav-link preto" href="#">Historia</a>
+              <a class="nav-link preto" href="./html/historia.html">Historia</a>
             </li>
             <hr>
             <li class="nav-item">
@@ -55,7 +56,9 @@
             </li>
             <hr>
             <li class="nav-item">
-              <a class="nav-link preto" href="#">Contatos</a>
+              <button type="button" class="nav-link">
+                <a class="nav-link preto" data-bs-toggle="modal" data-bs-target="#modal-contatos">Contato</a>
+              </button>
             </li>
         </div>
       </div>
@@ -107,7 +110,7 @@
 
     <!-- Cards -->
 
-    <section class="py-5">
+    <section class="pt-5 pb-3">
       <h2 class="text-center fw-bold pb-1">Nossos serviços</h2>
 
       <div class="container d-flex justify-content-around flex-wrap">
@@ -118,8 +121,8 @@
             <h5 class="card-title py-2 fw-bold">Desenvolvimento</h5>
             <p class="card-text">Projetanto com um leque de linguagens, bem como <strong>HTML, CSS, Javascript e
                 Bootstrap.</strong></p>
-            <a href="#" class="btn botao-padrao w-100 fw-bold" type="button" data-bs-toggle="offcanvas"
-              data-bs-target="#canvas-1" aria-controls="offcanvasRight">Saiba mais!</a>
+            <a href="#" class="btn botao-padrao w-100 fw-bold" type="button" data-bs-toggle="modal"
+              data-bs-target="#modal-1">Saiba mais!</a>
           </div>
         </div>
 
@@ -129,8 +132,8 @@
             <h5 class="card-title fw-bold">Responsividade</h5>
             <p class="card-text">Sistemas criados com uma interface responsiva, compativél com <strong>Smartphones,
                 Tablets e Desktop.</strong></p>
-            <a href="#" class="btn botao-padrao w-100 fw-bold mt-3" type="button" data-bs-toggle="offcanvas"
-              data-bs-target="#canvas-2" aria-controls="offcanvasRight">Saiba mais!</a>
+            <a href="#" class="btn botao-padrao w-100 fw-bold mt-3" type="button" data-bs-toggle="modal"
+              data-bs-target="#modal-2">Saiba mais!</a>
           </div>
         </div>
 
@@ -140,7 +143,7 @@
             <h5 class="card-title fw-bold">Segurança</h5>
             <p class="card-text">Sistemas com total segurança do usuário.</p>
             <a href="#" class="btn botao-padrao w-100 fw-bold botao-padrao-seguranca" type="button"
-              data-bs-toggle="offcanvas" data-bs-target="#canvas-3" aria-controls="offcanvasRight">Saiba mais!</a>
+              data-bs-toggle="modal" data-bs-target="#modal-3">Saiba mais!</a>
           </div>
         </div>
       </div>
@@ -150,14 +153,14 @@
 
     <footer class="text-center rodape">
       <section class="container p-4 pb-0">
-        <a href=”#!” class="btn ico-footer">
-          <i class="bi bi-whatsapp"></i>
+        <a href=”https://www.twitch.tv/paganis_” class="btn ico-footer">
+          <i class="bi bi-twitch"></i>
         </a>
-        <a href=”#!” class="btn ico-footer">
+        <a href=”https://www.instagram.com/paganlukz/” class="btn ico-footer">
           <i class="bi bi-instagram"></i>
         </a>
-        <a href=”#!” class="btn ico-footer">
-          <i class="bi bi-twitter"></i>
+        <a href=”https://github.com/PagaNiz” class="btn ico-footer">
+          <i class="bi bi-github"></i>
         </a>
         <div class="p-3">
           2023 <i class="bi bi-c-circle"></i> Desenvolvido por Lucas Pagani | Projeto fictício sem fins comerciais.
@@ -165,10 +168,119 @@
       </section>
     </footer>
 
+    <!-- Modal Contatos -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      crossorigin="anonymous"></script>
+    <div class="modal fade" id="modal-contatos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Entre em Contato!</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container my-4 bgForm rounded-3">
+              <form class="row g-3 w-100 pb-3">
+                <div class="col-md-6">
+                  <label for="inputName" class="form-label">Nome</label>
+                  <input type="text" class="form-control" id="inputName" placeholder="Nome Completo">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputEmail4" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="inputEmail4" placeholder="@email.com">
+                </div>
+                <div class="col-12">
+                  <label for="inputNumber" class="form-label">Número para Contato</label>
+                  <input type="number" class="form-control" id="inputNumber" placeholder="+55(51)99999-9999">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                    placeholder="Descreva seu projeto aqui!"></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="formFileSm" class="form-label">Projeto Esboço</label>
+                  <input class="form-control form-control-sm" id="formFileSm" type="file">
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn botao-padrao">Enviar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer mx-auto">
+            <button type="button" class="btn botao-padrao" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Desenvolvimento -->
+
+    <div class="modal fade" id="modal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Desenvolvimento</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body">
+            <img src="./assets/modal-desenvolver.png" alt="" class="w-100 px-4">
+            <p class="pt-4">Desenvolvido com uma lista vasta de linguagens e frameworks, desde HTML, CSS e Javascript,
+              até frameworks como Bootstrap5 e TailwindCSS.</p>
+          </div>
+          <div class="modal-footer mx-auto">
+            <button type="button" class="btn botao-padrao" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Responsividade -->
+
+    <div class="modal fade" id="modal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Responsividade</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body">
+            <img src="./assets/modal-responsive.png" alt="" class="w-100 px-4">
+            <p class="pt-4">Desenvolvimento totalmente responsivo, utilizando do método mobile first, desenvolvendo para
+              todas as plataformas.</p>
+          </div>
+          <div class="modal-footer mx-auto">
+            <button type="button" class="btn botao-padrao" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Segurança -->
+
+    <div class="modal fade" id="modal-3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Segurança</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body">
+            <img src="./assets/modal-security.png" alt="" class="w-100 px-4">
+            <p class="pt-4">Desenvolvimento 100% seguro, protegendo os dados do usuário.</p>
+          </div>
+          <div class="modal-footer mx-auto">
+            <button type="button" class="btn botao-padrao" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
