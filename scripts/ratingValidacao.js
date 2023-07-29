@@ -9,16 +9,14 @@ buttonRating.forEach((button) => {
             buttonSubmit.addEventListener('click', enviar);
 
             function enviar(e) {
-                const botaoEnviar = document.getElementById('buttonEnviarRating');
-                botaoEnviar.setAttribute("data-bs-target", "#ratingThankYou");
-                botaoEnviar.setAttribute("data-bs-toggle", "modal");
-                botaoEnviar.click();
+                buttonSubmit.setAttribute("data-bs-target", "#ratingThankYou");
+                buttonSubmit.setAttribute("data-bs-toggle", "modal");
+                buttonSubmit.click();
             }
 
             const resultado = document.getElementById('ratingResultado');
 
-            resultado.innerHTML = `${'Você selecionou ' + classes + ' de 10'}`
-
+            resultado.innerHTML = `Você selecionou  ${classes} de 10`
         }
     });
 })
