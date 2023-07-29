@@ -179,30 +179,30 @@
           </div>
           <div class="modal-body">
             <div class="container my-4 bgForm rounded-3">
-              <form class="row g-3 w-100 pb-3">
+              <form class="row g-3 w-100 pb-3" id="form">
                 <div class="col-md-6">
                   <label for="inputName" class="form-label">Nome</label>
-                  <input type="text" class="form-control" id="inputName" placeholder="Nome Completo">
+                  <input type="text" class="form-control" id="inputName" placeholder="Nome Completo" required>
                 </div>
                 <div class="col-md-6">
                   <label for="inputEmail4" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="@email.com">
+                  <input type="email" class="form-control" id="inputEmail4" placeholder="@email.com" required>
                 </div>
                 <div class="col-12">
                   <label for="inputNumber" class="form-label">Número para Contato</label>
-                  <input type="number" class="form-control" id="inputNumber" placeholder="+55(51)99999-9999">
+                  <input type="number" class="form-control" id="inputNumber" placeholder="(11) 99999-9999" required>
                 </div>
                 <div class="mb-3">
-                  <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                    placeholder="Descreva seu projeto aqui!"></textarea>
+                  <label for="descricao" class="form-label">Descrição</label>
+                  <textarea class="form-control" id="descricao" rows="3"
+                    placeholder="Descreva seu projeto aqui!" required></textarea>
                 </div>
                 <div class="mb-3">
                   <label for="formFileSm" class="form-label">Projeto Esboço</label>
                   <input class="form-control form-control-sm" id="formFileSm" type="file">
                 </div>
                 <div class="col-12">
-                  <button type="submit" class="btn botao-padrao">Enviar</button>
+                  <button id="buttonEnviarForm" type="submit" class="btn botao-padrao">Enviar</button>
                 </div>
               </form>
             </div>
@@ -214,73 +214,145 @@
       </div>
     </div>
 
-    <!-- Modal Desenvolvimento -->
-
-    <div class="modal fade" id="modal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
+    <div class="modal fade" id="ratingModal" aria-labelledby="exampleModalToggleLabel2" tabindex="-1" aria-hidden="true"
+      style="display: none;">
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h2 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Desenvolvimento</h2>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Nos Avalie!</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">
-            <img src="./assets/modal-desenvolver.png" alt="" class="w-100 px-4">
-            <p class="pt-4">Desenvolvido com uma lista vasta de linguagens e frameworks, desde HTML, CSS e Javascript,
-              até frameworks como Bootstrap5 e TailwindCSS.</p>
-          </div>
-          <div class="modal-footer mx-auto">
-            <button type="button" class="btn botao-padrao" data-bs-dismiss="modal">Fechar</button>
+          <div class="modal-body ratingContainer">
+            <div class="starRating">
+              <img src="./assets/rating/icon-star.svg" alt="Star Rating Icon">
+            </div>
+            <div class="tituloRating">
+              <h1>Qual Nota Merecemos?!</h1>
+              <p>Por favor, deixe-nos saber como fizemos com o seu pedido de suporte. Todos os comentários são
+                apreciados
+                para nos ajudar a melhorar a nossa oferta!</p>
+            </div>
+            <div class="botoesRatingContainer">
+              <button class="buttonRating" id="btn-nota-1" data-value="1">1</button>
+              <button class="buttonRating" id="btn-nota-2" data-value="2">2</button>
+              <button class="buttonRating" id="btn-nota-3" data-value="3">3</button>
+              <button class="buttonRating" id="btn-nota-4" data-value="4">4</button>
+              <button class="buttonRating" id="btn-nota-5" data-value="5">5</button>
+              <button class="buttonRating" id="btn-nota-6" data-value="6">6</button>
+              <button class="buttonRating" id="btn-nota-7" data-value="7">7</button>
+              <button class="buttonRating" id="btn-nota-8" data-value="8">8</button>
+              <button class="buttonRating" id="btn-nota-9" data-value="9">9</button>
+              <button class="buttonRating" id="btn-nota-10" data-value="10">10</button>
+            </div>
+            <div class="botaoSubmitContainer" id="botaoSubmitContainer">
+              <button class="botaoSubmit" id="buttonEnviarRating">Enviar</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Modal Responsividade -->
-
-    <div class="modal fade" id="modal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
+    <div class="modal fade" id="ratingThankYou" aria-labelledby="ratingThankYou" tabindex="-1" aria-hidden="true"
+      style="display: none;">
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Responsividade</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            <h1 class="modal-title fs-5" id="ratingThankYou">Obrigado por nos avaliar!</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">
-            <img src="./assets/modal-responsive.png" alt="" class="w-100 px-4">
-            <p class="pt-4">Desenvolvimento totalmente responsivo, utilizando do método mobile first, desenvolvendo para
-              todas as plataformas.</p>
+          <div class="modal-body thankYouContainer">
+            <div class="imgThankYouContainer">
+              <img src="./assets/rating/illustration-thank-you.svg" alt="Obrigado por Avaliar!">
+            </div>
+            <div class="ratingSelected">
+              <p id="ratingResultado">Você selecionou 0 de 10</p>
+            </div>
+            <div class="thankYouText">
+              <h2>Obrigado!</h2>
+              <p>Agradecemos por dedicar seu tempo para avaliar. Se você precisar de mais suporte,
+                não hesite em contactar!</p>
+            </div>
           </div>
-          <div class="modal-footer mx-auto">
-            <button type="button" class="btn botao-padrao" data-bs-dismiss="modal">Fechar</button>
+          <div class="modal-footer">
+            <button class="btn btn-primary" class="btn botao-padrao" data-bs-dismiss="modal">Fechar</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Modal Segurança -->
+  </div>
 
-    <div class="modal fade" id="modal-3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h2 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Segurança</h2>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-          </div>
-          <div class="modal-body">
-            <img src="./assets/modal-security.png" alt="" class="w-100 px-4">
-            <p class="pt-4">Desenvolvimento 100% seguro, protegendo os dados do usuário.</p>
-          </div>
-          <div class="modal-footer mx-auto">
-            <button type="button" class="btn botao-padrao" data-bs-dismiss="modal">Fechar</button>
-          </div>
+  <!-- Modal Desenvolvimento -->
+
+  <div class="modal fade" id="modal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Desenvolvimento</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <img src="./assets/modal-desenvolver.png" alt="" class="w-100 px-4">
+          <p class="pt-4">Desenvolvido com uma lista vasta de linguagens e frameworks, desde HTML, CSS e
+            Javascript,
+            até frameworks como Bootstrap5 e TailwindCSS.</p>
+        </div>
+        <div class="modal-footer mx-auto">
+          <button type="button" class="btn botao-padrao" data-bs-dismiss="modal">Fechar</button>
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Modal Responsividade -->
+
+  <div class="modal fade" id="modal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Responsividade</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <img src="./assets/modal-responsive.png" alt="" class="w-100 px-4">
+          <p class="pt-4">Desenvolvimento totalmente responsivo, utilizando do método mobile first,
+            desenvolvendo para
+            todas as plataformas.</p>
+        </div>
+        <div class="modal-footer mx-auto">
+          <button type="button" class="btn botao-padrao" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Segurança -->
+
+  <div class="modal fade" id="modal-3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Segurança</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <img src="./assets/modal-security.png" alt="" class="w-100 px-4">
+          <p class="pt-4">Desenvolvimento 100% seguro, protegendo os dados do usuário.</p>
+        </div>
+        <div class="modal-footer mx-auto">
+          <button type="button" class="btn botao-padrao" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
+  <script src="./scripts/contatoValidacao.js"></script>
+  <script src="./scripts/ratingValidacao.js"></script>
 </body>
 
 </html>

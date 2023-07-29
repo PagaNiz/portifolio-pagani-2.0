@@ -1,0 +1,134 @@
+/* Inicio Rating */
+
+.ratingContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.starRating{
+    background-color: var(--cor-complementar-3);
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em 1em;
+    border-radius: 50%;
+}
+
+.tituloRating h1{
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.tituloRating p{
+    font-family: var(--fonte-secundaria);
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.botoesRatingContainer{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.buttonRating{
+    background-color: var(--cor-complementar-3);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: unset;
+}
+
+.buttonRating:hover{
+    background-color:var(--cor-primaria);
+    color: var(--cor-cinza);
+    scale: 110%;
+    transition: ease-in-out 0.2s;
+}
+
+.buttonRating:focus{
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+    border: 1px inset var(--cor-cinza);
+}
+
+.botaoSubmitContainer{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.botaoSubmit{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    border: unset;
+    padding: 0.5em 5em;
+    background-color: var(--cor-complementar-3);
+}
+
+.botaoSubmit:hover{
+    background-color: var(--cor-primaria);
+    color: var(--cor-cinza);
+    scale: 105%;
+    transition: ease-in-out 0.2s;
+}
+
+/* Fim Rating */
+
+/* Inicio Rating Thank You */
+
+
+.thankYouContainer{
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+}
+
+.ratingSelected{
+    margin-top: 25px;
+}
+
+.ratingSelected p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    background-color: var(--cor-cinza);
+    color: var(--cor-secundaria-dark);
+    padding: 5px 10px;
+    opacity: 0.7;
+    font-size: 16px;
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+}
+
+.thankYouText{
+    margin-top: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.thankYouText h2{
+    font-size: 32px;
+    font-weight: 700;
+    font-family: var(--fonte-primaria);
+}
+
+.thankYouText p{
+    font-size: 14px;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-dark);
+    opacity: 0.7;
+}
+
+/* Inicio Rating Thank You */
